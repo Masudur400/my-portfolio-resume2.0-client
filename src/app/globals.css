@@ -122,6 +122,11 @@
 }
 
 
+ .cover-img {
+    background-image: url('../../public/images/bg.gif');
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
 
 
 
@@ -147,3 +152,42 @@
 }
 
 /* ------------------------ */
+
+
+
+.lightning-cursor-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+  }
+  
+  .lightning-strike {
+    position: absolute;
+    width: 2px;
+    height: 50px; /* Adjust height for lightning length */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(56, 27, 201, 0.8) 40%, rgba(0, 0, 255, 0) 100%);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 15px rgba(0, 212, 255, 0.6); /* Glow effect */
+    animation: strike-fade 0.3s ease-out forwards;
+    pointer-events: none;
+  }
+  
+  /* Animation for fade and disappearance */
+  @keyframes strike-fade {
+    0% {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scaleY(0.5);
+    }
+  }
+
+
+  
+  

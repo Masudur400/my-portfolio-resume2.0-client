@@ -88,31 +88,32 @@ const Skills = () => {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        <Card className="px-5 py-6 hover:scale-105 transition-transform duration-300">
-          <p className="text-4xl mb-2">
-            <LuCodeXml />
-          </p>
-          <p className="text-xl font-medium">Frontend Development</p>
-          <p className="text-gray-400 text-sm mt-2">
-            Building interactive and responsive user interfaces using modern web technologies.
-          </p>
-        </Card>
+        <Card className="px-5 py-6 group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-xl">
+  <p className="text-4xl mb-2 text-sky-600">
+    <LuCodeXml />
+  </p>
+  <p className="text-xl font-medium group-hover:text-sky-500">Frontend Development</p>
+  <p className="text-gray-400 text-sm mt-2">
+    Building interactive and responsive user interfaces using modern web technologies.
+  </p>
+</Card>
 
-        <Card className="px-5 py-6 hover:scale-105 transition-transform duration-300">
-          <p className="text-4xl mb-2">
+
+        <Card className="px-5 py-6 group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-xl">
+          <p className="text-4xl mb-2 text-purple-500">
             <BsFillInboxesFill />
           </p>
-          <p className="text-xl font-medium">Backend Development</p>
+          <p className="text-xl font-medium group-hover:text-purple-500">Backend Development</p>
           <p className="text-gray-400 text-sm mt-2">
             Designing secure and scalable server-side logic, databases, and APIs.
           </p>
         </Card>
 
-        <Card className="px-5 py-6 hover:scale-105 transition-transform duration-300">
-          <p className="text-4xl mb-2">
+        <Card className="px-5 py-6 group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-xl">
+          <p className="text-4xl mb-2 text-pink-400">
             <HiPaintBrush />
           </p>
-          <p className="text-xl font-medium">UI/UX Design</p>
+          <p className="text-xl font-medium group-hover:text-pink-400">UI/UX Design</p>
           <p className="text-gray-400 text-sm mt-2">
             Crafting visually appealing and user-friendly designs for better experiences.
           </p>

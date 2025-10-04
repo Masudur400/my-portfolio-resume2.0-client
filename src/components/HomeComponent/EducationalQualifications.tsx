@@ -32,7 +32,7 @@ const EducationalQualifications = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {qualifications.map((qual, index) => ( 
-          <Card key={index} data-aos="zoom-in" className="hover:scale-105 transition-transform duration-300 ">
+          <Card key={index} data-aos="zoom-in" className="px-2 py-6 group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-xl">
             <CardHeader className="pb-3">
               <CardTitle className="text-xl  font-medium  ">
                 {qual.title}
