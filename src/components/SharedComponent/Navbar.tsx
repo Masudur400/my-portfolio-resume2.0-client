@@ -15,6 +15,7 @@ const Navbar = () => {
     { id: 2, name: "About", href: "/about" },
     { id: 3, name: "Projects", href: "/projects" },
     { id: 4, name: "Blogs", href: "/blogs" },
+    { id: 5, name: "Dashboard", href: "/dashboard" },
   ];
 
   return (
@@ -27,7 +28,8 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 font-medium">
+        <div className="flex gap-3">
+          <div className="hidden md:flex space-x-8 font-medium">
           {links.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -42,11 +44,14 @@ const Navbar = () => {
               >
                 {link.name}
                 {isActive && (
-                  <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-blue-400 via-indigo-500 to-blue-700 animate-pulse"></span>
+                  <span className="absolute bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-blue-400 via-indigo-500 to-blue-700 animate-pulse"></span>
                 )}
               </Link>
             );
           })}
+          
+        </div>
+        <Link href='/auth/login' className="mx-3 px-4 py-[5px] bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-700 hover:from-blue-600 hover:via-indigo-700 hover:to-blue-800 rounded-md text-center">Login</Link>
         </div>
 
         {/* Mobile Menu Button */}

@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 type Strike = {
-  id: number;
+  id: string; // string instead of number
   x: number;
   y: number;
   rotation: number;
@@ -15,7 +15,7 @@ const BlurryCursor = () => {
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
       const newStrike: Strike = {
-        id: Date.now(),
+        id: crypto.randomUUID(), // always unique
         x: event.clientX + Math.random() * 50 - 25,
         y: event.clientY + Math.random() * 50 - 25,
         rotation: Math.random() * 360,

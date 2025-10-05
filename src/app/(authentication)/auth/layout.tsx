@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DashboardLayout = ({children}:{children:React.ReactNode}) => {
+const AuthLayout = ({children}:{children:React.ReactNode}) => {
     return (
         <div className='container mx-auto'>
             {children}
@@ -8,4 +8,4 @@ const DashboardLayout = ({children}:{children:React.ReactNode}) => {
     );
 };
 
-export default DashboardLayout;
+export default AuthLayout;
