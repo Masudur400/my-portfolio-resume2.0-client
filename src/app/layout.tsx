@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import BlurryCursor from "@/components/BlurryCursor/BlurryCursor";  
 import { Toaster } from "react-hot-toast";
+import AuthProvider from "@/providers/AuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +35,9 @@ export default function RootLayout({
         <div className="min-h-screen bg-no-repeat bg-cover bg-center cover-img"
            > 
             <div className="bg-black/80">
+            <AuthProvider> 
               {children}
+            </AuthProvider>
               </div> 
         </div>
       </body>

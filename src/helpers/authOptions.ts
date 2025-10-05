@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { NextAuthOptions } from "next-auth";
@@ -90,6 +89,11 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
 
+  // ✅ Add this
+  session: {
+    strategy: "jwt",
+  },
+
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
@@ -111,9 +115,10 @@ export const authOptions: NextAuthOptions = {
     },
   },
 
-  secret: process.env.AUTH_SECRET,
+  // ✅ Change AUTH_SECRET → NEXTAUTH_SECRET
+  secret: process.env.NEXTAUTH_SECRET,
 
   pages: {
-    signIn: "/login",
+    signIn: "/auth/login",
   },
 };

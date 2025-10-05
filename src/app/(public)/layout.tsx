@@ -1,13 +1,13 @@
-import Footer from '@/components/SharedComponent/Footer';
+import Footer from '@/components/SharedComponent/Footer'; 
 import Navbar from '@/components/SharedComponent/Navbar';
 import React from 'react';
 
 const PublicLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <div>
-            <Navbar></Navbar>
+             <Navbar></Navbar>
             <main
-                className='container mx-auto p-5 max-sm:px-2 pt-20 min-h-[calc(100vh-250px)]'>
+                className='container mx-auto p-5 max-sm:px-2 pt-20 min-h-[calc(100vh-80px)]'>
                 {children}
             </main>
             <Footer></Footer>

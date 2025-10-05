@@ -2,7 +2,7 @@
 import { FieldValues } from "react-hook-form";
 
 export const register = async (data: FieldValues) => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/user`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/auth/register`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -15,17 +15,17 @@ export const register = async (data: FieldValues) => {
   return await res.json();
 };
 
-export const login = async (data: FieldValues) => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/auth/login`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-    credentials: "include",
-  });
-  if (!res.ok) {
-    console.error("Login Failed", await res.text());
-    throw new Error("Login failed");
-  }
+// export const login = async (data: FieldValues) => {
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/auth/login`, {
+//     method: "POST",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify(data),
+//     credentials: "include",
+//   });
+//   if (!res.ok) {
+//     console.error("Login Failed", await res.text());
+//     throw new Error("Login failed");
+//   }
 
-  return await res.json();
-};
+//   return await res.json();
+// };
