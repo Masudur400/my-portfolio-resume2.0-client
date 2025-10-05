@@ -155,6 +155,7 @@
 
 
 
+/* cursor effect  */
 .lightning-cursor-container {
     position: fixed;
     top: 0;
@@ -187,7 +188,7 @@
       transform: scaleY(0.5);
     }
   }
-
+/* -------------------------------------- */
 
   
   

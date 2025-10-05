@@ -21,7 +21,7 @@ const Navbar = () => {
     <nav className="shadow-md fixed w-full z-50 bg-black">
       <div className="container mx-auto px-4 flex justify-between items-center h-16">
         {/* Logo */}
-        <Link href='/' className="flex items-center gap-2 bg-gradient-to-r from-blue-400 via-indigo-500 to-blue-700 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300"> 
+        <Link href='/' className="flex items-center gap-2 bg-gradient-to-r from-blue-400 via-indigo-500 to-blue-700 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300   border-indigo-700 px-2 py-1 rounded-lg border-x-2"> 
         <p className='text-4xl text-indigo-500'><LuCodeXml /></p> 
         <p className="text-xl my-0 font-bold ">Masudur</p> 
         </Link>

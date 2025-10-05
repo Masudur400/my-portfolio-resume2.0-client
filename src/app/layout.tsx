@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import BlurryCursor from "@/components/BlurryCursor/BlurryCursor"; 
-import bg from '../../public/images/bg.gif'
+import BlurryCursor from "@/components/BlurryCursor/BlurryCursor";  
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
