@@ -9,7 +9,7 @@ const Hobbies = () => {
       <h2 className="lg:text-4xl md:text-3xl text-2xl font-medium my-10">Hobbies & Interests</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <Card className="hover:shadow-lg hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm">
+        <Card className="hover:shadow-lg hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm shadow-lg shadow-indigo-800">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Volleyball className="w-5 h-5 text-orange-600" />
@@ -21,7 +21,7 @@ const Hobbies = () => {
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-lg hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm">
+        <Card className="hover:shadow-lg hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm shadow-lg shadow-indigo-800">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Bike className="w-5 h-5 text-blue-600" />
@@ -33,7 +33,7 @@ const Hobbies = () => {
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-lg hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm">
+        <Card className="hover:shadow-lg hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm shadow-lg shadow-indigo-800">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Mountain className="w-5 h-5 text-green-600" />
@@ -45,7 +45,7 @@ const Hobbies = () => {
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-lg hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm">
+        <Card className="hover:shadow-lg hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm shadow-lg shadow-indigo-800">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Cpu className="w-5 h-5 text-purple-600" />

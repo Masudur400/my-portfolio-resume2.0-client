@@ -88,18 +88,18 @@ const Skills = () => {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        <Card className="px-5 py-6 group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-xl">
-  <p className="text-4xl mb-2 text-sky-600">
-    <LuCodeXml />
-  </p>
-  <p className="text-xl font-medium group-hover:text-sky-500">Frontend Development</p>
-  <p className="text-gray-400 text-sm mt-2">
-    Building interactive and responsive user interfaces using modern web technologies.
-  </p>
-</Card>
+        <Card className="px-5 py-6 group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-xl shadow-lg shadow-indigo-800">
+          <p className="text-4xl mb-2 text-sky-600">
+            <LuCodeXml />
+          </p>
+          <p className="text-xl font-medium group-hover:text-sky-500">Frontend Development</p>
+          <p className="text-gray-400 text-sm mt-2">
+            Building interactive and responsive user interfaces using modern web technologies.
+          </p>
+        </Card>
 
 
-        <Card className="px-5 py-6 group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-xl">
+        <Card className="px-5 py-6 group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-xl shadow-lg shadow-indigo-800">
           <p className="text-4xl mb-2 text-purple-500">
             <BsFillInboxesFill />
           </p>
@@ -109,7 +109,7 @@ const Skills = () => {
           </p>
         </Card>
 
-        <Card className="px-5 py-6 group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-xl">
+        <Card className="px-5 py-6 group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-xl shadow-lg shadow-indigo-800">
           <p className="text-4xl mb-2 text-pink-400">
             <HiPaintBrush />
           </p>
@@ -121,10 +121,7 @@ const Skills = () => {
       </div>
 
 
-      <div>
-        {/* <h3 className="md:text-4xl text-2xl font-medium text-center my-10 opacity-80">
-          Skills & Technologies
-        </h3> */}
+      <div> 
         <div className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-9 gap-4   mx-auto my-16">
           {gridItems.map((item) => (
             <div
@@ -134,7 +131,7 @@ const Skills = () => {
               onDragOver={(e) => handleDragOver(e, item)}
               onDrop={(e) => handleDrop(e, item)}
               onDragLeave={() => setHoveredItem(null)}
-              className={`w-fit mx-auto md:px-4 md:py-2 px-6 py-2 border-2 border-gray-600 hover:shadow-gray-600 hover:shadow-md rounded text-center cursor-move ${item.id === draggedItem?.id && "bg-blue-100 opacity-30"
+              className={`w-fit mx-auto md:px-4 md:py-2 px-6 py-2 border-2 border-gray-600 hover:shadow-indigo-800 hover:shadow-md rounded text-center cursor-move ${item.id === draggedItem?.id && "bg-blue-100 opacity-30"
                 } ${item.id === hoveredItem?.id
                   ? "border-dashed border-2 border-blue-500"
                   : "border-gray-100"

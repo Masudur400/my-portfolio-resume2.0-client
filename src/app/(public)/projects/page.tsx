@@ -1,4 +1,4 @@
-import Projects from '@/components/ProjectsComponent/Projects';
+import AllProjects from '@/components/Projects/AllProjects'; 
 import { Metadata } from 'next';
 import React from 'react';
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const ProjectsPage = () => {
     return (
         <div>
-            <Projects></Projects>
+             <AllProjects></AllProjects>
         </div>
     );
 };

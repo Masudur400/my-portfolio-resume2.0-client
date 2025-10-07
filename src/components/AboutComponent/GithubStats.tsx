@@ -28,10 +28,7 @@ export default function GithubStats() {
   }
 
   return (
-    <section className="my-14 px-4  text-gray-200">
-      {/* <h2 className="text-3xl font-bold mb-10 text-center text-gray-100">
-        GitHub <span className="text-indigo-400">Profile & Stats</span>
-      </h2> */}
+    <section className="my-14 px-4  text-gray-200"> 
 
       {data && (
         <div className="max-w-6xl mx-auto space-y-10">
@@ -75,7 +72,7 @@ export default function GithubStats() {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Username */}
-            <Card className="group shadow-sm hover:shadow-xl transition duration-300 rounded-2xl bg-white/5 backdrop-blur-sm">
+            <Card className="group hover:shadow-xl transition duration-300 rounded-2xl bg-white/5 backdrop-blur-sm shadow-lg shadow-indigo-800">
               <CardContent className="p-6 text-center">
                 <div className="flex justify-center items-center mb-3">
                   <Github className="w-10 h-10 text-gray-200 group-hover:scale-110 transition" />
@@ -86,7 +83,7 @@ export default function GithubStats() {
             </Card>
 
             {/* Public Repos */}
-            <Card className="group shadow-sm hover:shadow-xl transition duration-300 rounded-2xl bg-white/5 backdrop-blur-sm">
+            <Card className="group hover:shadow-xl transition duration-300 rounded-2xl bg-white/5 backdrop-blur-sm shadow-lg shadow-indigo-800">
               <CardContent className="p-6 text-center">
                 <div className="flex justify-center items-center mb-3">
                   <FolderGit2 className="w-10 h-10 text-indigo-400 group-hover:scale-110 transition" />
@@ -97,7 +94,7 @@ export default function GithubStats() {
             </Card>
 
             {/* Followers */}
-            <Card className="group shadow-sm hover:shadow-xl transition duration-300 rounded-2xl bg-white/5 backdrop-blur-sm">
+            <Card className="group hover:shadow-xl transition duration-300 rounded-2xl bg-white/5 backdrop-blur-sm shadow-lg shadow-indigo-800">
               <CardContent className="p-6 text-center">
                 <div className="flex justify-center items-center mb-3">
                   <Users className="w-10 h-10 text-green-400 group-hover:scale-110 transition" />
@@ -108,7 +105,7 @@ export default function GithubStats() {
             </Card>
 
             {/* Following */}
-            <Card className="group shadow-sm hover:shadow-xl transition duration-300 rounded-2xl bg-white/5 backdrop-blur-sm">
+            <Card className="group hover:shadow-xl transition duration-300 rounded-2xl bg-white/5 backdrop-blur-sm shadow-lg shadow-indigo-800">
               <CardContent className="p-6 text-center">
                 <div className="flex justify-center items-center mb-3">
                   <UserCheck className="w-10 h-10 text-pink-400 group-hover:scale-110 transition" />

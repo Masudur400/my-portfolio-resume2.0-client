@@ -9,11 +9,11 @@ import Link from "next/link";
 const Banner = () => {
     return (
         <div className="">
-            <Card className="bg-white/5 backdrop-blur-sm">
+            <Card className="bg-white/5 backdrop-blur-sm shadow-lg shadow-indigo-800">
                 <div className="avg w-full max-sm:h-[680px]">
                     <div className='h-full'>
                         <div className='md:flex gap-9 lg:gap-24 items-center'>
-                            <Image src={img1} alt="img"  className='h-72 w-72 lg:h-96 lg:w-96 border-3 rounded-full lg:ml-20 md:ml-10 md:mx-1 mx-auto md:my-8 hover:scale-105 transition-transform duration-300' />
+                            <Image src={img1} alt="img"  className='h-72 w-72 lg:h-96 lg:w-96 border-3 rounded-full lg:ml-20 md:ml-10 md:mx-1 mx-auto md:my-8 hover:scale-105 transition-transform duration-500' />
                             
                             <div className='text-white text-opacity-80 opacity-90 max-sm:ml-4 lg:w-3/6 md:w-2/4 mt-3 flex flex-col gap-5'>
                                 <div>
