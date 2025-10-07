@@ -13,15 +13,17 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const { data: session } = useSession()
-  console.log(session);
+  const role = session?.user?.role
 
   const links = [
     { id: 1, name: "Home", href: "/" },
     { id: 2, name: "About", href: "/about" },
     { id: 3, name: "Projects", href: "/projects" },
     { id: 4, name: "Blogs", href: "/blogs" },
-    { id: 5, name: "Dashboard", href: "/dashboard" },
   ];
+  if (role === 'OWNER') {
+    links.push({ id: 5, name: "Dashboard", href: "/dashboard" });
+  }
 
   return (
     <nav className="shadow-md fixed w-full z-50 bg-black">
@@ -42,8 +44,8 @@ const Navbar = () => {
                   key={link.id}
                   href={link.href}
                   className={`relative transition-all duration-300 ${isActive
-                      ? "bg-gradient-to-r from-blue-400 via-indigo-500 to-blue-700 bg-clip-text text-transparent font-semibold"
-                      : "hover:text-indigo-500"
+                    ? "bg-gradient-to-r from-blue-400 via-indigo-500 to-blue-700 bg-clip-text text-transparent font-semibold"
+                    : "hover:text-indigo-500"
                     }`}
                 >
                   {link.name}
@@ -55,18 +57,18 @@ const Navbar = () => {
             })}
 
             {
-            session ?
-              (<Button onClick={()=>signOut()} className="mx-3 px-4 py-[5px] bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-700 hover:from-blue-600 hover:via-indigo-700 hover:to-blue-800 rounded-md text-center text-white">
-                LogOut
-              </Button>) :
-              <Link href='/auth/login' className="mx-3 px-4 py-[5px] bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-700 hover:from-blue-600 hover:via-indigo-700 hover:to-blue-800 rounded-md text-center">
-                Login
-              </Link>
-          }
+              session ?
+                (<Button onClick={() => signOut()} className="mx-3 px-4 py-[5px] bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-700 hover:from-blue-600 hover:via-indigo-700 hover:to-blue-800 rounded-md text-center text-white">
+                  LogOut
+                </Button>) :
+                <Link href='/auth/login' className="mx-3 px-4 py-[5px] bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-700 hover:from-blue-600 hover:via-indigo-700 hover:to-blue-800 rounded-md text-center">
+                  Login
+                </Link>
+            }
 
           </div>
-           
-          
+
+
         </div>
 
         {/* Mobile Menu Button */}
@@ -89,8 +91,8 @@ const Navbar = () => {
                 href={link.href}
                 onClick={() => setOpen(false)}
                 className={`block px-4 py-3 transition-all duration-300 ${isActive
-                    ? "bg-gradient-to-r from-blue-400 via-indigo-500 to-blue-700 bg-clip-text text-transparent font-semibold"
-                    : "hover:text-indigo-500"
+                  ? "bg-gradient-to-r from-blue-400 via-indigo-500 to-blue-700 bg-clip-text text-transparent font-semibold"
+                  : "hover:text-indigo-500"
                   }`}
               >
                 {link.name}

@@ -4,8 +4,7 @@
 import { useEffect, useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Users, FolderGit2, UserCheck, Github } from "lucide-react"
-import Image from "next/image"
-
+import Image from "next/image" 
 export default function GithubStats() {
   const [data, setData] = useState<any>(null)
   const [loading, setLoading] = useState(true)
@@ -71,6 +70,8 @@ export default function GithubStats() {
           </div>
 
 
+ 
+
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Username */}
@@ -122,3 +123,8 @@ export default function GithubStats() {
     </section>
   )
 }
+
+
+
+ 
+

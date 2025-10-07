@@ -1,9 +1,10 @@
+import CreateProjectForm from '@/components/Projects/CreateProjectForm';
 import React from 'react';
 
 const DashboardPage = () => {
     return (
         <div>
-            DashboardPage
+             <CreateProjectForm></CreateProjectForm>
         </div>
     );
 };
