@@ -1,7 +1,7 @@
-import CreateBlogForm from '@/components/Blogs/CreateBlogsForm';
-import CreateProjectForm from '@/components/Projects/CreateProjectForm';
-import { Metadata } from 'next';
-import React from 'react';
+ import { Metadata } from 'next';
+import React from 'react'; 
+import { FaCode, FaProjectDiagram, FaUsers, FaGithub } from "react-icons/fa";
+import { MdWorkspacePremium } from "react-icons/md";
 
 
 export const metadata: Metadata = {
@@ -10,14 +10,72 @@ export const metadata: Metadata = {
 };
 
 
+ 
+
+
+
+const stats = [
+  {
+    id: 1,
+    title: "Total Projects",
+    value: "25+",
+    icon: <FaProjectDiagram className="text-4xl text-indigo-500" />,
+    desc: "Completed personal & client projects",
+  },
+  {
+    id: 2,
+    title: "Technologies Used",
+    value: "15+",
+    icon: <FaCode className="text-4xl text-blue-400" />,
+    desc: "React, Next.js, Node.js, MongoDB, etc.",
+  },
+  {
+    id: 3,
+    title: "GitHub Repositories",
+    value: "40+",
+    icon: <FaGithub className="text-4xl text-gray-300" />,
+    desc: "Open source contributions and code demos",
+  },
+  {
+    id: 4,
+    title: "Clients Served",
+    value: "10+",
+    icon: <FaUsers className="text-4xl text-green-400" />,
+    desc: "Worked with international & local clients",
+  },
+  {
+    id: 5,
+    title: "Experience",
+    value: "3+ Years",
+    icon: <MdWorkspacePremium className="text-4xl text-yellow-400" />,
+    desc: "Frontend & Full Stack Development",
+  },
+];
+
+
 const DashboardPage = () => {
     return (
-        <div>
-             <CreateProjectForm></CreateProjectForm>
-             <div className='my-20'>
-                <CreateBlogForm></CreateBlogForm>
-             </div>
+         <section className="min-h-screen bg-black text-white py-5 px-6">
+  <div className="max-w-6xl mx-auto"> 
+
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {stats.map((item) => (
+        <div
+          key={item.id}
+          className="bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-700 hover:border-indigo-500 transform transition-all duration-300 hover:scale-105 hover:shadow-indigo-800/40 hover:shadow-2xl"
+        >
+          <div className="mb-4">{item.icon}</div>
+          <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+          <p className="text-3xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-blue-700 bg-clip-text text-transparent mb-2">
+            {item.value}
+          </p>
+          <p className="text-sm text-gray-400">{item.desc}</p>
         </div>
+      ))}
+    </div>
+  </div>
+</section>
+
     );
 };
 

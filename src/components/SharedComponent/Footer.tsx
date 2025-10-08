@@ -5,7 +5,7 @@ import { FaFacebookSquare, FaGithub, FaLinkedin } from 'react-icons/fa';
 const Footer = () => {
     return (
         <div>
-            <div className="bg-white/5 backdrop:blur-md">
+            <div className="bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 backdrop:blur-md">
             <footer className="footer footer-center border border-base-300 p-10">
                 <aside> 
                     <nav>

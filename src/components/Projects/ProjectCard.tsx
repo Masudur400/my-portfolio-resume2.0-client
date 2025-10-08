@@ -24,7 +24,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
     return (
         <>
-            <Card className="mb-10 mt-5 group shadow-lg shadow-indigo-800 bg-white/5 backdrop:blur-md rounded-xl overflow-hidden transition-shadow duration-300">
+            <Card className="mb-10 mt-5 group shadow-lg shadow-indigo-800 bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 rounded-xl overflow-hidden transition-shadow duration-300 hover:border-indigo-900">
                 {/* Thumbnail */}
                 <div className="relative w-full h-48">
                     <img
@@ -68,7 +68,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                         {/* See More Button */}
                         <button
                             onClick={() => setOpen(true)}
-                            className="text-sm underline font-medium hover:text-sky-600 text-red-300"
+                            className="text-sm underline font-medium hover:text-indigo-600 text-indigo-400"
                         >
                             See More
                         </button>
@@ -80,7 +80,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                             <Link
                                 href={project.liveUrl}
                                 target="_blank"
-                                className="px-3 py-1 rounded-md bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-700 hover:from-blue-600 hover:via-indigo-700 hover:to-blue-800 transition-all duration-300 text-sm font-medium"
+                                className="px-3 py-1 rounded-md bg-gradient-to-r from-blue-600 via-indigo-700 to-blue-800 hover:from-blue-700 hover:via-indigo-800 hover:to-blue-900 transition-all duration-300 text-sm font-medium"
                             >
                                 Live Link
                             </Link>

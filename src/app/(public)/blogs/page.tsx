@@ -1,4 +1,4 @@
-import Blogs from '@/components/BlogsComponent/Blogs';
+import AllBlogs from '@/components/Blogs/AllBlogs'; 
 import { Metadata } from 'next';
 import React from 'react';
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const BlogsPage = () => {
     return (
         <div>
-            <Blogs></Blogs>
+             <AllBlogs></AllBlogs>
         </div>
     );
 };

@@ -242,7 +242,7 @@ export default function CreateProjectForm() {
         type="submit"
         disabled={loading}
         size="lg"
-        className="w-full mt-6 text-white bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-700 hover:from-blue-600 hover:via-indigo-700 hover:to-blue-800"
+        className="w-full mt-6 text-white bg-gradient-to-r from-blue-600 via-indigo-700 to-blue-800 hover:from-blue-700 hover:via-indigo-800 hover:to-blue-900"
       >
         {loading ? "Publishing..." : "Publish Project"}
       </Button>

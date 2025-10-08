@@ -32,7 +32,7 @@ interface SkillItem {
 }
 
 const Skills = () => {
-  const cardData: SkillItem[] = [
+ const cardData: SkillItem[] = [
     { id: 1, image: <HTML5 />, title: "HTML" },
     { id: 2, image: <CSS3 />, title: "CSS3" },
     { id: 3, image: <TailwindCSS />, title: "TailwindCSS" },
@@ -88,7 +88,7 @@ const Skills = () => {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        <Card className="px-5 py-6 group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-xl shadow-lg shadow-indigo-800">
+        <Card className="px-5 py-6 group hover:scale-105 transition-transform duration-300 bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 rounded-xl shadow-lg shadow-indigo-800">
           <p className="text-4xl mb-2 text-sky-600">
             <LuCodeXml />
           </p>
@@ -96,10 +96,9 @@ const Skills = () => {
           <p className="text-gray-400 text-sm mt-2">
             Building interactive and responsive user interfaces using modern web technologies.
           </p>
-        </Card>
+        </Card> 
 
-
-        <Card className="px-5 py-6 group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-xl shadow-lg shadow-indigo-800">
+        <Card className="px-5 py-6 group hover:scale-105 transition-transform duration-300 bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 rounded-xl shadow-lg shadow-indigo-800">
           <p className="text-4xl mb-2 text-purple-500">
             <BsFillInboxesFill />
           </p>
@@ -109,7 +108,7 @@ const Skills = () => {
           </p>
         </Card>
 
-        <Card className="px-5 py-6 group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-xl shadow-lg shadow-indigo-800">
+        <Card className="px-5 py-6 group hover:scale-105 transition-transform duration-300 bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 rounded-xl shadow-lg shadow-indigo-800">
           <p className="text-4xl mb-2 text-pink-400">
             <HiPaintBrush />
           </p>
@@ -131,7 +130,7 @@ const Skills = () => {
               onDragOver={(e) => handleDragOver(e, item)}
               onDrop={(e) => handleDrop(e, item)}
               onDragLeave={() => setHoveredItem(null)}
-              className={`w-fit mx-auto md:px-4 md:py-2 px-6 py-2 border-2 border-gray-600 hover:shadow-indigo-800 hover:shadow-md rounded text-center cursor-move ${item.id === draggedItem?.id && "bg-blue-100 opacity-30"
+              className={`w-fit mx-auto md:px-4 md:py-2 px-6 py-2 border-2 bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 border-gray-600 hover:shadow-indigo-800 hover:shadow-md rounded text-center cursor-move ${item.id === draggedItem?.id && "bg-blue-100 opacity-30"
                 } ${item.id === hoveredItem?.id
                   ? "border-dashed border-2 border-blue-500"
                   : "border-gray-100"

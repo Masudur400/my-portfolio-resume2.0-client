@@ -59,7 +59,7 @@ export default function GithubStats() {
                 href={data?.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 w-fit px-4 py-2 rounded-md flex gap-2 justify-center items-center text-white font-semibold text-sm sm:text-base bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-700 hover:from-blue-600 hover:via-indigo-700 hover:to-blue-800 shadow-md hover:shadow-lg hover:shadow-indigo-900/50 transition-all duration-300"
+                className="mt-4 w-fit px-4 py-2 rounded-md flex gap-2 justify-center items-center text-white font-semibold text-sm sm:text-base bg-gradient-to-r from-blue-600 via-indigo-700 to-blue-800 hover:from-blue-700 hover:via-indigo-800 hover:to-blue-900 shadow-md hover:shadow-lg hover:shadow-indigo-900/50 transition-all duration-300"
               >
                 Visit GitHub Profile
               </a>
@@ -72,7 +72,7 @@ export default function GithubStats() {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Username */}
-            <Card className="group hover:shadow-xl transition duration-300 rounded-2xl bg-white/5 backdrop-blur-sm shadow-lg shadow-indigo-800">
+            <Card className="group hover:shadow-xl transition duration-300 rounded-2xl bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 shadow-lg shadow-indigo-800">
               <CardContent className="p-6 text-center">
                 <div className="flex justify-center items-center mb-3">
                   <Github className="w-10 h-10 text-gray-200 group-hover:scale-110 transition" />
@@ -83,7 +83,7 @@ export default function GithubStats() {
             </Card>
 
             {/* Public Repos */}
-            <Card className="group hover:shadow-xl transition duration-300 rounded-2xl bg-white/5 backdrop-blur-sm shadow-lg shadow-indigo-800">
+            <Card className="group hover:shadow-xl transition duration-300 rounded-2xl bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 shadow-lg shadow-indigo-800">
               <CardContent className="p-6 text-center">
                 <div className="flex justify-center items-center mb-3">
                   <FolderGit2 className="w-10 h-10 text-indigo-400 group-hover:scale-110 transition" />
@@ -94,7 +94,7 @@ export default function GithubStats() {
             </Card>
 
             {/* Followers */}
-            <Card className="group hover:shadow-xl transition duration-300 rounded-2xl bg-white/5 backdrop-blur-sm shadow-lg shadow-indigo-800">
+            <Card className="group hover:shadow-xl transition duration-300 rounded-2xl bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 shadow-lg shadow-indigo-800">
               <CardContent className="p-6 text-center">
                 <div className="flex justify-center items-center mb-3">
                   <Users className="w-10 h-10 text-green-400 group-hover:scale-110 transition" />
@@ -105,7 +105,7 @@ export default function GithubStats() {
             </Card>
 
             {/* Following */}
-            <Card className="group hover:shadow-xl transition duration-300 rounded-2xl bg-white/5 backdrop-blur-sm shadow-lg shadow-indigo-800">
+            <Card className="group hover:shadow-xl transition duration-300 rounded-2xl bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 shadow-lg shadow-indigo-800">
               <CardContent className="p-6 text-center">
                 <div className="flex justify-center items-center mb-3">
                   <UserCheck className="w-10 h-10 text-pink-400 group-hover:scale-110 transition" />

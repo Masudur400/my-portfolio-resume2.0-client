@@ -108,7 +108,7 @@ export default function LoginForm() {
                 )}
               />
 
-              <Button type="submit" className="w-full mt-2 bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-700 hover:from-blue-600 hover:via-indigo-700 hover:to-blue-800 text-white">
+              <Button type="submit" className="w-full mt-2 bg-gradient-to-r from-blue-600 via-indigo-700 to-blue-800 hover:from-blue-700 hover:via-indigo-800 hover:to-blue-900 text-white">
                 Login
               </Button>
             </form>
