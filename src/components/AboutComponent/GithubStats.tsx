@@ -4,7 +4,8 @@
 import { useEffect, useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Users, FolderGit2, UserCheck, Github } from "lucide-react"
-import Image from "next/image" 
+import Image from "next/image"
+import Link from "next/link"
 export default function GithubStats() {
   const [data, setData] = useState<any>(null)
   const [loading, setLoading] = useState(true)
@@ -28,7 +29,7 @@ export default function GithubStats() {
   }
 
   return (
-    <section className="my-14 px-4  text-gray-200"> 
+    <section className="my-14 px-4  text-gray-200">
 
       {data && (
         <div className="max-w-6xl mx-auto space-y-10">
@@ -36,15 +37,15 @@ export default function GithubStats() {
           <div className="flex flex-col md:flex-row items-center md:items-start md:justify-center text-center md:text-left gap-6 md:gap-12">
             {/* Profile Image */}
             <div className="flex-shrink-0">
-              <div className="p-[4px] rounded-full bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-700 hover:from-blue-600 hover:via-indigo-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-indigo-900/50">
+              {/* <div className="p-[4px] rounded-full bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-700 hover:from-blue-600 hover:via-indigo-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-indigo-900/50"> */}
                 <Image
                   src={data?.avatar_url}
                   alt={data?.login}
                   width={150}
                   height={150}
-                  className="rounded-full transition-transform duration-300 hover:scale-105"
+                  className="rounded-full animate-float border-4 border-white transition-transform duration-300 hover:scale-105"
                 />
-              </div>
+              {/* </div> */}
             </div>
 
 
@@ -55,24 +56,24 @@ export default function GithubStats() {
               {data?.bio && (
                 <p className="mt-3 max-w-lg text-gray-400">{data?.bio}</p>
               )}
-              <a
+              <Link
                 href={data?.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 w-fit px-4 py-2 rounded-md flex gap-2 justify-center items-center text-white font-semibold text-sm sm:text-base bg-gradient-to-r from-blue-600 via-indigo-700 to-blue-800 hover:from-blue-700 hover:via-indigo-800 hover:to-blue-900 shadow-md hover:shadow-lg hover:shadow-indigo-900/50 transition-all duration-300"
+                className="outer-cont btn-flex mt-4 custom-card"
               >
                 Visit GitHub Profile
-              </a>
+              </Link>
             </div>
           </div>
 
 
- 
+
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Username */}
-            <Card className="group hover:shadow-xl transition duration-300 rounded-2xl bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 shadow-lg shadow-indigo-800">
+            <Card className="custom-card animate-float group hover:shadow-xl transition duration-300 rounded-2xl bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 border-2">
               <CardContent className="p-6 text-center">
                 <div className="flex justify-center items-center mb-3">
                   <Github className="w-10 h-10 text-gray-200 group-hover:scale-110 transition" />
@@ -83,7 +84,7 @@ export default function GithubStats() {
             </Card>
 
             {/* Public Repos */}
-            <Card className="group hover:shadow-xl transition duration-300 rounded-2xl bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 shadow-lg shadow-indigo-800">
+            <Card className="custom-card animate-float group hover:shadow-xl transition duration-300 rounded-2xl bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 border-2">
               <CardContent className="p-6 text-center">
                 <div className="flex justify-center items-center mb-3">
                   <FolderGit2 className="w-10 h-10 text-indigo-400 group-hover:scale-110 transition" />
@@ -94,7 +95,7 @@ export default function GithubStats() {
             </Card>
 
             {/* Followers */}
-            <Card className="group hover:shadow-xl transition duration-300 rounded-2xl bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 shadow-lg shadow-indigo-800">
+            <Card className="custom-card animate-float group hover:shadow-xl transition duration-300 rounded-2xl bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 border-2">
               <CardContent className="p-6 text-center">
                 <div className="flex justify-center items-center mb-3">
                   <Users className="w-10 h-10 text-green-400 group-hover:scale-110 transition" />
@@ -105,7 +106,7 @@ export default function GithubStats() {
             </Card>
 
             {/* Following */}
-            <Card className="group hover:shadow-xl transition duration-300 rounded-2xl bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 shadow-lg shadow-indigo-800">
+            <Card className="custom-card animate-float group hover:shadow-xl transition duration-300 rounded-2xl bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 border-2">
               <CardContent className="p-6 text-center">
                 <div className="flex justify-center items-center mb-3">
                   <UserCheck className="w-10 h-10 text-pink-400 group-hover:scale-110 transition" />
@@ -123,5 +124,5 @@ export default function GithubStats() {
 
 
 
- 
+
 

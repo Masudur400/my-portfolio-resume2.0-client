@@ -33,8 +33,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
 
   return (
     <>
-      {/* ---- BLOG CARD ---- */}
-      <div className="group relative mb-10 mt-5 rounded-xl overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black border border-gray-800 hover:border-indigo-600 shadow-md hover:shadow-indigo-800/40 transition-all duration-300 flex flex-col">
+      <div className="group relative mb-10 mt-5 rounded-xl overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black border border-gray-800 hover:border-indigo-600 shadow-md hover:shadow-indigo-800/40 transition-all duration-300 flex flex-col custom-card">
         {/* Cover Image */}
         <div className="relative h-48 overflow-hidden">
           {blog.coverImage && !imageError ? (
@@ -64,7 +63,6 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
           )}
         </div>
 
-        {/* ---- CARD BODY ---- */}
         <div className="p-5 flex flex-col flex-1">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-3">
@@ -86,11 +84,6 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
             {blog.title}
           </h3>
 
-          {/* Excerpt */}
-          <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3 group-hover:text-gray-200 transition">
-            {blog.excerpt || 'No description available.'}
-          </p>
-
           {/* Meta Info */}
           <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
             <div className="flex items-center gap-2">
@@ -103,15 +96,17 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
             </div>
           </div>
 
-          {/* Read Button */}
+          {/* ✅ Fixed Read Button */}
           <Button
-            onClick={() => setOpenModal(true)}
-            className="w-full bg-gradient-to-r from-blue-600 via-indigo-700 to-blue-800 hover:from-blue-700 hover:via-indigo-800 hover:to-blue-900 text-white transition-colors duration-300 mt-auto"
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setOpenModal(true);
+            }}
+            className="w-full flex items-center justify-center gap-2 mt-auto custom-card bg-gradient-to-r from-indigo-600 via-indigo-700 to-indigo-900 text-white rounded-md py-2   transition-all duration-300"
           >
-            <div className="flex items-center justify-center gap-2">
-              <span>Read Article</span>
-              <ArrowUpRight size={16} />
-            </div>
+            <span>Read Article</span>
+            <ArrowUpRight size={16} />
           </Button>
         </div>
       </div>
@@ -167,6 +162,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
 
             <div className="mt-6 text-right">
               <Button
+                type="button"
                 onClick={() => setOpenModal(false)}
                 className="bg-gray-800 hover:bg-gray-700 text-white"
               >

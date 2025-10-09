@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import BlogCard from './BlogCard';
+import Loading from '../Loading/Loading';
 
 
 interface Blog {
@@ -17,17 +18,16 @@ interface Blog {
 
 const AllBlogs = () => {
 
-     const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [blogs, setBlogs] = useState<Blog[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/blogs`); // Make sure endpoint is correct
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/blogs`);  
         const data = await res.json();
 
-        if (data.success) {
-          // Wrap single object into array if needed
+        if (data.success) { 
           const blogsArray = Array.isArray(data.data) ? data.data : [data.data];
           setBlogs(blogsArray);
         } else {
@@ -43,16 +43,16 @@ const AllBlogs = () => {
     fetchBlogs();
   }, []);
 
-  if (loading) return <div className="text-white text-center p-6">Loading blogs...</div>;
+  if (loading) return <Loading></Loading>
 
 
-    return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
-             {
-                blogs?.map((blog, idx) => <BlogCard key={idx} blog={blog}></BlogCard>)
-             }
-        </div>
-    );
+  return (
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+      {
+        blogs?.map((blog, idx) => <BlogCard key={idx} blog={blog}></BlogCard>)
+      }
+    </div>
+  );
 };
 
 export default AllBlogs;

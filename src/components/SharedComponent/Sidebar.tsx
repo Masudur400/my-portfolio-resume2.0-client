@@ -41,8 +41,8 @@ const Sidebar = () => {
           transition-transform duration-300 
           lg:translate-x-0 lg:static lg:flex flex-col`}
       >
-        <div className="px-6 py-3 font-bold text-2xl border-b border-gray-200 dark:border-gray-700">
-          <Link href='/' className="flex items-center gap-2 bg-gradient-to-r from-blue-400 via-indigo-500 to-blue-700 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300 border-indigo-700 px-2 py-1 rounded-lg border-x-2">
+        <div className=" px-6 py-3 font-bold text-2xl border-b border-gray-200 dark:border-gray-700">
+          <Link href='/' className="custom-card flex items-center gap-2 bg-gradient-to-r from-blue-400 via-indigo-500 to-blue-700 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300 border-indigo-700 px-2 py-1 rounded-lg border-x-2">
           <p className='text-4xl text-indigo-500'><LuCodeXml /></p>
           <p className="text-xl my-0 font-bold ">Masudur</p>
         </Link>
@@ -57,7 +57,7 @@ const Sidebar = () => {
                 href={link.href}
                 className={`flex items-center gap-4 px-6 py-3 my-1 rounded-lg transition-colors ${
                   isActive
-                    ? "font-semibold text-sm sm:text-base bg-gradient-to-r from-blue-600 via-indigo-700 to-blue-800 hover:from-blue-700 hover:via-indigo-800 hover:to-blue-900 text-white"
+                    ? "font-semibold text-sm sm:text-base bg-gradient-to-r from-blue-900 via-indigo-800 to-blue-900 hover:from-blue-800 hover:via-indigo-900 hover:to-blue-800 text-white"
                     : "hover:bg-gray-800"
                 }`}
               >

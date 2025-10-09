@@ -2,6 +2,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';   
 import ProjectCard from './ProjectCard';
+import Loading from '../Loading/Loading';
 interface IProject {
   id: number;
   title: string;
@@ -24,10 +25,9 @@ const AllProjects = () => {
     const fetchBlogs = async () => {
       try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/projects`);
-        const data = await res.json();
-
+        const data = await res.json(); 
         if (data.success) {
-          const projectsArray = Array.isArray(data.data) ? data.data : [data.data];
+          const projectsArray = Array.isArray(data?.data) ? data.data : [data.data];
           setProjects(projectsArray);
         } else {
           console.error("Failed to fetch projects:", data.message);
@@ -42,7 +42,7 @@ const AllProjects = () => {
     fetchBlogs();
   }, []);
 
-  if (loading) return <div className="text-white text-center p-6">Loading projects...</div>;
+  if (loading) return <Loading></Loading>
 
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>

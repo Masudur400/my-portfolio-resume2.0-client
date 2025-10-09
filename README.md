@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio of Masudur Rahman
 
-## Getting Started
+Hi! I am **Masudur Rahman**, a highly skilled and motivated Front-End Developer with a strong passion for building modern, user-friendly web applications and exploring new technologies.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+ 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Projects
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Here are some projects I have developed and managed:
 
-## Learn More
+### 1. **Portfolio Website**
+- Developed a responsive portfolio website showcasing personal projects, blogs, and skills.
+- Implemented animations and smooth scrolling with **Framer Motion**.
+- Features: Projects, Blogs, Skills, Dashboard.
 
-To learn more about Next.js, take a look at the following resources:
+### 2. **Dashboard for Project & Blog Management**
+- Built a full-featured dashboard for managing projects and blogs.
+- Features:
+  - Add/Edit/Delete Projects
+  - Add/Edit/Delete Blogs
+  - Manage Project details and content
+  - Manage Blog content and categories
+- Implemented dynamic modals and interactive UI.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. **Blog & Project Cards**
+- Created reusable **BlogCard** and **ProjectCard** components.
+- Features:
+  - Dynamic content fetching
+  - Smooth modal popup with details
+  - Gradient animations & hover effects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. **Real-Time Features**
+- Implemented real-time project and blog updates using React state management and API integration.
+- Added **loading indicators** for better user experience.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📚 Blogs
+- Wrote and managed multiple blogs using a custom dashboard.
+- Features:
+  - Blog creation, editing, and deletion
+  - Tags, published status, and content formatting
+  - Dynamic modal to view full blog content
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## ⚡ Key Highlights
+
+- Built full-stack features including authentication, dashboard management, and CRUD operations.
+- Optimized website performance with **loading animations** and lazy loading.
+- Applied **modern CSS & Tailwind CSS** for responsive and interactive design.
+- Experienced in deploying applications to **Vercel** with CI/CD workflow.
+
+---
+
+ 
+
+### 📌 Notes
+
+This portfolio showcases my **front-end and full-stack development skills** including **Next.js, Tailwind CSS, Node.js, Express.js, PostgreSQL**, and dynamic dashboard management. The design emphasizes **clean, responsive, and modern UI/UX** along with smooth animations and interactive features.
+
+---
+
+- **Portfolio:** (https://masudur-rahman-portfolio.vercel.app/)  
+- **GitHub Client:** (https://github.com/Masudur400?tab=repositories)  
+- **GitHub Server:** (https://github.com/Masudur400/my-portfolio-resume2.0-backend)  

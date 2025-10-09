@@ -69,7 +69,7 @@ export const ContactForm = () => {
                         <p className="max-sm-text-sm  my-2">Message</p>
                         <textarea required name="message" placeholder="Message" id="" rows={4} className="border-2 border-base-300 bg-base-100 rounded-md w-full text-sm md:text-base px-4  py-1 mb-2 bg-transparent"></textarea>
                     </div>
-                    <input type="submit" value="Send Message" className="px-4 py-2 bg-gradient-to-r from-blue-600 via-indigo-700 to-blue-800 hover:from-blue-700 hover:via-indigo-800 hover:to-blue-900 w-full my-5 hover:cursor-pointer rounded-md max-sm:text-sm" />
+                    <input type="submit" value="Send Message" className="outer-cont btn-flex  items-center w-full my-5" />
                 </form>
             </div>
         </div>
