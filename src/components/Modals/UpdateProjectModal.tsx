@@ -24,6 +24,9 @@ const UpdateProjectModal = ({ project, onClose, onUpdated }: UpdateProjectModalP
   const [technologies, setTechnologies] = useState<string[]>([]);
   const [image, setImage] = useState<File | null>(null);
 
+  const [featureInput, setFeatureInput] = useState("");
+  const [techInput, setTechInput] = useState("");
+
   useEffect(() => {
     if (project) {
       setTitle(project.title || "");
@@ -60,6 +63,28 @@ const UpdateProjectModal = ({ project, onClose, onUpdated }: UpdateProjectModalP
     } catch (err: any) {
       Swal.fire("Error!", err.message || "Failed to update project", "error");
     }
+  };
+
+  const handleAddFeature = () => {
+    if (featureInput.trim() && !features.includes(featureInput.trim())) {
+      setFeatures([...features, featureInput.trim()]);
+      setFeatureInput("");
+    }
+  };
+
+  const handleAddTechnology = () => {
+    if (techInput.trim() && !technologies.includes(techInput.trim())) {
+      setTechnologies([...technologies, techInput.trim()]);
+      setTechInput("");
+    }
+  };
+
+  const handleRemoveFeature = (item: string) => {
+    setFeatures(features.filter((f) => f !== item));
+  };
+
+  const handleRemoveTechnology = (item: string) => {
+    setTechnologies(technologies.filter((t) => t !== item));
   };
 
   if (!project) return null;
@@ -128,38 +153,60 @@ const UpdateProjectModal = ({ project, onClose, onUpdated }: UpdateProjectModalP
 
           {/* Features */}
           <div>
-            <label className="block text-gray-300 mb-1">Features (comma separated)</label>
-            <input
-              type="text"
-              value={features.join(", ")}
-              onChange={(e) =>
-                setFeatures(
-                  e.target.value
-                    .split(",")
-                    .map((f) => f.trim())
-                    .filter((f) => f)
-                )
-              }
-              className="w-full p-2 rounded bg-gray-800 text-white border border-gray-600"
-            />
+            <label className="block text-gray-300 mb-1">Features</label>
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={featureInput}
+                onChange={(e) => setFeatureInput(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && (e.preventDefault(), handleAddFeature())}
+                placeholder="Type and press Enter"
+                className="flex-1 p-2 rounded bg-gray-800 text-white border border-gray-600"
+              />
+              <Button type="button" onClick={handleAddFeature}>
+                Add
+              </Button>
+            </div>
+            <div className="flex flex-wrap gap-2 mt-3">
+              {features.map((f, i) => (
+                <span
+                  key={i}
+                  onClick={() => handleRemoveFeature(f)}
+                  className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-blue-700 transition"
+                >
+                  {f} ✕
+                </span>
+              ))}
+            </div>
           </div>
 
           {/* Technologies */}
           <div>
-            <label className="block text-gray-300 mb-1">Technologies (comma separated)</label>
-            <input
-              type="text"
-              value={technologies.join(", ")}
-              onChange={(e) =>
-                setTechnologies(
-                  e.target.value
-                    .split(",")
-                    .map((t) => t.trim())
-                    .filter((t) => t)
-                )
-              }
-              className="w-full p-2 rounded bg-gray-800 text-white border border-gray-600"
-            />
+            <label className="block text-gray-300 mb-1">Technologies</label>
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={techInput}
+                onChange={(e) => setTechInput(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && (e.preventDefault(), handleAddTechnology())}
+                placeholder="Type and press Enter"
+                className="flex-1 p-2 rounded bg-gray-800 text-white border border-gray-600"
+              />
+              <Button type="button" onClick={handleAddTechnology}>
+                Add
+              </Button>
+            </div>
+            <div className="flex flex-wrap gap-2 mt-3">
+              {technologies.map((t, i) => (
+                <span
+                  key={i}
+                  onClick={() => handleRemoveTechnology(t)}
+                  className="bg-green-600 text-white px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-green-700 transition"
+                >
+                  {t} ✕
+                </span>
+              ))}
+            </div>
           </div>
 
           {/* Thumbnail */}
