@@ -64,13 +64,13 @@ const Navbar = () => {
             <div className="">
               {session ? (
                    
-                  <div  onClick={() => signOut()} className="outer-cont px-1 lg:px-2 py-1  custom-card btn-flex items-center w-fit text-sm"> 
+                  <div  onClick={() => signOut()} className="outer-cont px-1 lg:px-2 py-1  custom-card btn-flex items-center w-fit"> 
                     LogOut
                   </div> 
               ) : (
                 <Link
                   href="/auth/login"
-                  className="outer-cont px-1 lg:px-2 py-1  btn-flex custom-card text-sm items-center w-fit"
+                  className="outer-cont px-1 lg:px-2 py-1  btn-flex custom-card items-center w-fit"
                 > 
                     SignIn 
                 </Link>
@@ -111,7 +111,7 @@ const Navbar = () => {
             {session ? (
               <Button
                 onClick={() => signOut()}
-                className="w-full outer-cont px-1 lg:px-2 py-1 text-sm  custom-card btn-flex"
+                className="w-full outer-cont px-1 lg:px-2 py-1 custom-card btn-flex"
               >
                 LogOut
               </Button>
@@ -119,7 +119,7 @@ const Navbar = () => {
               <Link
                 href="/auth/login"
                 onClick={() => setOpen(false)}
-                className="block w-full outer-cont px-1 lg:px-2 py-1  text-sm custom-card btn-flex"
+                className="block w-full outer-cont px-1 lg:px-2 py-1 custom-card btn-flex"
               >
                 Login
               </Link>
