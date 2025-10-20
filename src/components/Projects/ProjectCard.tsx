@@ -81,7 +81,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                             <Link
                                 href={project.liveUrl}
                                 target="_blank"
-                                className="outer-cont custom-card btn-flex flex items-center w-fit"
+                                className="outer-cont px-1 lg:px-2 py-1 text-sm custom-card btn-flex flex items-center w-fit"
                             >
                                 Live Link
                             </Link>
@@ -91,7 +91,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                             <Link
                                 href={project.frontendRepoUrl}
                                 target="_blank"
-                                className="outer-cont custom-card btn-flex flex items-center w-fit gap-1"
+                                className="outer-cont px-1 lg:px-2 py-1 text-sm custom-card btn-flex flex items-center w-fit gap-1"
                             >
                                 <FaGithub /> Frontend
                             </Link>
@@ -101,7 +101,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                             <Link
                                 href={project.backendRepoUrl}
                                 target="_blank"
-                                className="outer-cont custom-card btn-flex flex items-center w-fit gap-1"
+                                className="outer-cont px-1 lg:px-2 py-1 text-sm custom-card btn-flex flex items-center w-fit gap-1"
                             >
                                 <FaGithub /> Backend
                             </Link>

@@ -60,7 +60,7 @@ export default function GithubStats() {
                 href={data?.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="outer-cont btn-flex mt-4 custom-card"
+                className="outer-cont px-1 lg:px-2 py-1 btn-flex mt-4 custom-card"
               >
                 Visit GitHub Profile
               </Link>

@@ -48,7 +48,7 @@ const Banner = () => {
                                     download
                                     className="w-fit" 
                                 >
-                                    <div className="outer-cont btn-flex flex items-center w-fit custom-card"> 
+                                    <div className="outer-cont px-1 lg:px-2 py-1 btn-flex flex items-center w-fit custom-card"> 
                                         <LuDownload className="text-lg" />
                                         Download Resume
                                     </div> 

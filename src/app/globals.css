@@ -228,7 +228,7 @@
 }
 
 .outer-cont {
-  padding: 5px 15px;   
+  /* padding: 5px 15px;    */
   border: none;
   /* font-size: 13px; */
   cursor: pointer;
