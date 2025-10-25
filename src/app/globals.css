@@ -227,10 +227,8 @@
   gap: 6px; 
 }
 
-.outer-cont {
-  /* padding: 5px 15px;    */
-  border: none;
-  /* font-size: 13px; */
+.outer-cont { 
+  border: none; 
   cursor: pointer;
   position: relative;
   background: linear-gradient(90deg, #4f46e5, #4338ca, #3730a3);  
@@ -277,7 +275,7 @@
   box-shadow:
     inset 0px 0px 2px #ffffff50,
     inset 0px 15px 10px #00000030;
-  margin-top: 2px;
+    transform: translateY(2px); 
 }
 
 

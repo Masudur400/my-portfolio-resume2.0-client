@@ -10,7 +10,7 @@ const Banner = () => {
     return (
         <div className="">
             <Card className="bg-gradient-to-br from-gray-900/5 via-gray-800 to-black/5 border-2 shadow-lg  ">
-                <div className="avg w-full max-sm:h-[680px]">
+                <div className="avg w-full ">
                     <div className='h-full'>
                         <div className='md:flex gap-9 lg:gap-24 items-center'>
                             {/* <Image src={img1} alt="img" className='h-72 w-72 lg:h-96 lg:w-96 border-3 rounded-full lg:ml-20 md:ml-10 md:mx-1 mx-auto md:my-8 hover:scale-105 transition-transform duration-500' /> */}
