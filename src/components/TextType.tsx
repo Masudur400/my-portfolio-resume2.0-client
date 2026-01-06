@@ -175,7 +175,7 @@ const TextType = ({
       ...props
     },
     <span
-      className={`font-inter text-type__content inline-block text-transparent    bg-gradient-to-r from-blue-500  via-indigo-500 to-blue-600 bg-clip-text   animate-gradient-x transition-transform duration-300`}
+      className={`font-inter text-type__content inline-block text-transparent    bg-linear-to-r from-blue-500  via-indigo-500 to-blue-600 bg-clip-text   animate-gradient-x transition-transform duration-300`}
     >
       {displayedText}
     </span>,

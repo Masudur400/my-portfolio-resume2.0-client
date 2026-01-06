@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import React from 'react';
+'use client'
+import Link from 'next/link'; 
 import { FaFacebookSquare, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
