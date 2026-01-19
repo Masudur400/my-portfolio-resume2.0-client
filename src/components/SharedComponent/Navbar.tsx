@@ -61,7 +61,8 @@ const Navbar = () => {
                 </Link>
               );
             })}
-            <div className="">
+            <div></div>
+            {/* <div className="">
               {session ? (
                    
                   <div  onClick={() => signOut()} className="outer-cont px-1 lg:px-2 py-1  custom-card btn-flex items-center w-fit"> 
@@ -75,7 +76,7 @@ const Navbar = () => {
                     SignIn 
                 </Link>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -107,7 +108,8 @@ const Navbar = () => {
               </Link>
             );
           })}
-          <div className="px-4 py-3">
+          
+          {/* <div className="px-4 py-3">
             {session ? (
               <Button
                 onClick={() => signOut()}
@@ -124,7 +126,7 @@ const Navbar = () => {
                 Login
               </Link>
             )}
-          </div>
+          </div> */}
         </div>
       )}
     </nav>

@@ -23,8 +23,8 @@ import { HiEye, HiEyeOff } from "react-icons/hi";
 export default function LoginForm() {
   const form = useForm<FieldValues>({
     defaultValues: {
-      email: "",
-      password: "",
+      email: "rana.admin@gmail.com",
+      password: "superadmin123",
     },
   });
 

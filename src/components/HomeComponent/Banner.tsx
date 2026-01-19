@@ -2,7 +2,7 @@ import {
     Card,
 } from "@/components/ui/card"
 import Image from "next/image";
-import img1 from '../../../public/images/personal-2.jpg'
+import img1 from '../../../public/images/personal-15.png'
 import { LuDownload } from "react-icons/lu"; 
 import TextType from "../TextType";
 
@@ -40,7 +40,7 @@ const Banner = () => {
                                     </div>
                                 </div>
 
-                                <p>Aspiring web developer with a solid foundation in front-end and back-end technologies, eager to contribute skills in building
+                                <p className="text-gray-100">Aspiring <span className="font-bold text-blue-300">web developer</span> with a solid foundation in <span className="font-bold text-blue-300">front-end</span> and <span className="font-bold text-blue-300">back-end</span> technologies, eager to contribute skills in building
                                     dynamic and user-friendly websites. Committed to continuous learning, collaboration, and a proactive approach to mastering
                                     new technologies.</p>
                                 <a
